@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 50%;
+            height: auto;
+            margin: auto;
+            margin-top: 5%;
+        }
+
+        div {
+            background-color: skyblue;
+        }
+
+        button {
+            width: 50%;
+            height: auto;
+            padding: 10px;
+            background-color: blue;
+            color: white;
+            font-size: 15px;
+            border: 0;
+        }
+
+        body {
+            background-color: rgb(40, 175, 254);
+        }
+    </style>
+</head>
+
+<body>
+    <h1><label for="flavor-input">Choose flavor and watch video:</label></h1>
+    <input type="text" id="flavor-input" name="flavor" list="flavors" placeholder="Type or select...">
+
+    <datalist id="flavors">
+        <option value="Chocolate"></option>
+        <option value="Vanilla"></option>
+        <option value="Strawberry"></option>
+        <option value="Mint"></option>
+        <option value="Cookies & Cream"></option>
+        <option value="Mint Chocolate Chip"></option>
+        <option value="Rajbhog"></option>
+        <option value="Kaju Draksh"></option>
+        <option value="Tender Coconut"></option>
+        <option value="Badam Pista"></option>
+        <option value="Dessert Mashups"></option>
+        <option value="Modern Classics"></option>
+    </datalist>
+    <br></br>
+    <form action="video.html">
+        <button type="submit" height="50px" ,width="100px" ,margin="10px" ,color="blue">Watch Video </button>
+    </form>
+    <div>
+        <h2>My Songs 🎼</h2>
+        <hr>
+        <audio controls>
+            <source src="audio/Dhurandhar Song Baloch - Sagar Kadam X VDJ LOVE.mp3">
+        </audio>
+    </div>
+</body>
+
+</html>

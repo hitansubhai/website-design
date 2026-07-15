@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Modern HTML5 Home Page</title>
+    <style>
+        /* Base Styles & Color Palette */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: #f8fafc;
+            /* Soft off-white */
+            color: #334155;
+            /* Slate dark text */
+        }
+
+        /* Header Layout */
+        header {
+            background-color: #1e293b;
+            /* Deep slate blue */
+            color: #ffffff;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        /* Logo styling */
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #38bdf8;
+            /* Vibrant sky blue */
+            text-decoration: none;
+        }
+
+        /* Navigation Links */
+        nav a {
+            color: #cbd5e1;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            color: #ffffff;
+        }
+
+        /* Search Bar styling */
+        .search-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .search-container input[type="text"] {
+            padding: 8px 12px;
+            border: none;
+            border-radius: 4px 0 0 4px;
+            outline: none;
+        }
+
+        .search-container button {
+            padding: 8px 15px;
+            background-color: #38bdf8;
+            border: none;
+            color: #1e293b;
+            cursor: pointer;
+            border-radius: 0 4px 4px 0;
+            font-weight: bold;
+        }
+
+        /* Create Account Button */
+        .btn-create {
+            background-color: #10b981;
+            /* Mint / Emerald green */
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.2s;
+        }
+
+        .btn-create:hover {
+            background-color: #059669;
+        }
+
+        /* Main Grid Layout (Content + Sidebar) */
+        .container {
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            /* 3 parts main content, 1 part sidebar */
+            gap: 30px;
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #e2e8f0, #cbd5e1);
+            padding: 40px;
+            text-align: center;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+
+        /* Aside / Sidebar styling */
+        aside {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            height: fit-content;
+        }
+
+        aside h3 {
+            color: #0f172a;
+            margin-top: 0;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 10px;
+        }
+
+        /* Footer styling */
+        footer {
+            background-color: #0f172a;
+            color: #94a3b8;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        /* Responsive design for smaller screens */
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+
+            header {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header Section with Logo, Nav, Search, and Action Button -->
+    <header>
+        <!-- Logo -->
+        <a href="#" class="logo">⚡ MyBrand</a>
+
+        <!-- Navigation -->
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Explore</a>
+            <a href="#">Pricing</a>
+        </nav>
+
+        <!-- Search Bar -->
+        <div class="search-container">
+            <input type="text" placeholder="Search website...">
+            <button type="submit">Search</button>
+        </div>
+
+        <!-- Create Account CTA -->
+        <a href="#" class="btn-create">Create Account</a>
+    </header>
+
+    <!-- Main Content Area using CSS Grid -->
+    <div class="container">
+
+        <!-- Primary Content -->
+        <main>
+            <section class="hero">
+                <h2>Welcome to a Cleaner Web Experience</h2>
+                <p>We've upgraded the layout with custom styling, integrated search, and proper HTML5 semantics.</p>
+            </section>
+
+            <section>
+                <h3>Latest Updates</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Core structure remains clean while CSS takes
+                    care of the visual appeal. Explore our features and let us know what you think!</p>
+            </section>
+        </main>
+
+        <!-- HTML5 Aside Element (Sidebar) -->
+        <aside>
+            <h3>Trending Topics</h3>
+            <ul>
+                <li><a href="#">HTML5 Best Practices</a></li>
+                <li><a href="#">CSS Grid Layouts</a></li>
+                <li><a href="#">UI/UX Color Theory</a></li>
+            </ul>
+            <p><strong>Tip:</strong> The <code>&lt;aside&gt;</code> element is perfect for sidebars, ads, or secondary
+                information related to the main content.</p>
+        </aside>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 MyBrand. Built beautifully with HTML5 & CSS3.</p>
+    </footer>
+
+</body>
+
+</html>
