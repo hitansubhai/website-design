@@ -1,0 +1,25 @@
+const express = require('express');
+const app = express();
+
+// Middleware to read the data sent by the user/hacker
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+
+app.post('/submit-order', (req, res) => {
+    // 1. Get the data sent to the server
+    const customerName = req.body.name;
+    const orderQty = parseInt(req.body.qty);
+
+    // 2. SERVER-SIDE VALIDATION (The Ultimate Shield)
+    // Even if a hacker bypassed the HTML min="1" rule, this stops them.
+    if (orderQty <= 0) {
+        // Blocks the hacker and protects the database!
+        return res.status(400).send("Error Rejected! Quantity must be greater than 0.");
+    }
+
+    // 3. If validation passes, process the order
+    // (In real life, you would save it to a database here)
+    res.send(`Order accepted for ${customerName}. Quantity: ${orderQty}`);
+});
+
+app.listen(3000, () => console.log('Server running on port 3000'));
