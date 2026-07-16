@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multimedia Integration Assignment</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        h2 {
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 5px;
+            margin-top: 30px;
+        }
+
+        .music-player {
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            max-width: 400px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .track {
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>HTML5 Multimedia Integration</h1>
+
+    <!-- Task 1: Favorite Song Audio with Controls -->
+    <h2>Task 1: Favorite Song Audio</h2>
+    <p>Listen to my favorite song below:</p>
+    <audio controls>
+        <source src="audio/mixkit-fright-night-871.mp3" type="audio/mpeg">
+        <source src="favorite-song.ogg" type="audio/ogg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <hr>
+
+    <!-- Task 2: Embedded YouTube Video -->
+    <h2>Task 2: IPL Highlights Video (YouTube Iframe)</h2>
+    <iframe width="560" height="315" src="video/mixkit-countryside-meadow-4075-hd-ready.mp4"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen>
+    </iframe>
+
+    <hr>
+
+    <!-- Task 3 & Task 5: Video with Autoplay, Loop, and Restricted Controls -->
+    <h2>Task 3 & 5: Custom HTML5 Video</h2>
+    <p>Autoplay video (muted for browser compatibility) with download and fullscreen controls disabled:</p>
+    <video width="560" height="315" autoplay loop muted controls controlsList="nodownload nofullscreen">
+        <source src="video/VN20260605_123257.mp4" type="video/mp4">
+        <source src="sample-video.webm" type="video/webm">
+        Your browser does not support the video tag.
+    </video>
+
+    <hr>
+
+    <!-- Task 4: Mini Music Player ('Chill Beats' Playlist) -->
+    <h2>Task 4: Chill Beats Playlist</h2>
+    <div class="music-player">
+        <div class="track">
+            <h3>1. Lo-Fi Chill Vibe</h3>
+            <audio controls>
+                <source src="audio/mixkit-hip-hop-02-738.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+
+        <div class="track">
+            <h3>2. Midnight Acoustic</h3>
+            <audio controls>
+                <source src="audio/mixkit-silent-descent-614.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+    </div>
+
+</body>
+
+</html>
