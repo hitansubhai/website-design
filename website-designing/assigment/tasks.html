@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Lists, Tables, and Forms Tasks</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+
+        h2 {
+            color: #0056b3;
+            border-bottom: 2px solid #0056b3;
+            padding-bottom: 5px;
+            margin-top: 30px;
+        }
+
+        table {
+            width: 100%;
+            max-width: 600px;
+            border-collapse: collapse;
+            margin-top: 15px;
+            background-color: #fff;
+        }
+
+        th,
+        td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #e9ecef;
+        }
+
+        caption {
+            font-weight: bold;
+            font-size: 1.1em;
+            margin-bottom: 8px;
+            color: #495057;
+        }
+
+        .form-container {
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #ccc;
+            max-width: 400px;
+            border-radius: 6px;
+            margin-top: 15px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .form-group input {
+            width: 95%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .btn-submit {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .btn-submit:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- TASK 1: Favorite IPL Teams and Players -->
+    <h2>Task 1: Favorite IPL Teams and Players</h2>
+    <ul>
+        <li>
+            <strong>Chennai Super Kings (CSK)</strong>
+            <ol>
+                <li>MS Dhoni</li>
+                <li>Ravindra Jadeja</li>
+                <li>Ruturaj Gaikwad</li>
+            </ol>
+        </li>
+        <li>
+            <strong>Mumbai Indians (MI)</strong>
+            <ol>
+                <li>Rohit Sharma</li>
+                <li>Suryakumar Yadav</li>
+                <li>Jasprit Bumrah</li>
+            </ol>
+        </li>
+        <li>
+            <strong>Royal Challengers Bengaluru (RCB)</strong>
+            <ol>
+                <li>Virat Kohli</li>
+                <li>Rajat Patidar</li>
+                <li>Mohammed Siraj</li>
+            </ol>
+        </li>
+        <li>
+            <strong>Kolkata Knight Riders (KKR)</strong>
+            <ol>
+                <li>Rinku Singh</li>
+                <li>Sunil Narine</li>
+                <li>Andre Russell</li>
+            </ol>
+        </li>
+        <li>
+            <strong>Rajasthan Royals (RR)</strong>
+            <ol>
+                <li>Sanju Samson</li>
+                <li>Yashasvi Jaiswal</li>
+                <li>Yuzvendra Chahal</li>
+            </ol>
+        </li>
+    </ul>
+
+    <!-- TASK 2: Food Delivery Apps Comparison Table -->
+    <h2>Task 2: Food Delivery Apps Comparison</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>App Name</th>
+                <th>Delivery Charges</th>
+                <th>User Rating</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Zomato</td>
+                <td>₹40</td>
+                <td>4.5 / 5</td>
+            </tr>
+            <tr>
+                <td>Swiggy</td>
+                <td>₹35</td>
+                <td>4.4 / 5</td>
+            </tr>
+            <tr>
+                <td>Uber Eats</td>
+                <td>₹50</td>
+                <td>4.2 / 5</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- TASK 3: Music Streaming Login Form -->
+    <h2>Task 3: Music Streaming App Login</h2>
+    <div class="form-container">
+        <form action="#" method="post">
+            <div class="form-group">
+                <label for="user-email">Email Address:</label>
+                <input type="email" id="user-email" name="email" placeholder="enter your email" required>
+            </div>
+            <div class="form-group">
+                <label for="user-password">Password:</label>
+                <input type="password" id="user-password" name="password" placeholder="enter your password" required>
+            </div>
+            <button type="submit" class="btn-submit">Login</button>
+        </form>
+    </div>
+
+    <!-- TASK 4: Purchases Table with Caption -->
+    <h2>Task 4: Recent Online Purchases</h2>
+    <table>
+        <caption>Summary of Last 5 Online Purchases</caption>
+        <thead>
+            <tr>
+                <th>Product Name</th>
+                <th>App Used</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Wireless Earbuds</td>
+                <td>Amazon</td>
+                <td>₹1,499</td>
+            </tr>
+            <tr>
+                <td>Casual Sneakers</td>
+                <td>Myntra</td>
+                <td>₹2,199</td>
+            </tr>
+            <tr>
+                <td>Smart Watch</td>
+                <td>Flipkart</td>
+                <td>₹2,999</td>
+            </tr>
+            <tr>
+                <td>Coffee Mug Set</td>
+                <td>Amazon</td>
+                <td>₹450</td>
+            </tr>
+            <tr>
+                <td>Backpack</td>
+                <td>Flipkart</td>
+                <td>₹899</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+
+</html>
