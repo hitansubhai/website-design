@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Cricket Ball Canvas</title>
+</head>
+
+<body>
+
+    <canvas id="cricketBallCanvas" width="200" height="200" style="border: 1px solid #ccc;"></canvas>
+
+    <script>
+        const canvas = document.getElementById('cricketBallCanvas');
+        const ctx = canvas.getContext('2d');
+
+        // 1. Draw Red Ball Circle
+        ctx.beginPath();
+        ctx.arc(100, 100, 70, 0, 2 * Math.PI); // Center (100,100), radius 70
+        ctx.fillStyle = '#D32F2F'; // Cricket ball red
+        ctx.fill();
+        ctx.lineWidth = 2;
+        ctx.strokeStyle = '#B71C1C';
+        ctx.stroke();
+
+        // 2. Draw White Seam Arc across the ball
+        ctx.beginPath();
+        ctx.arc(100, 100, 70, -Math.PI / 3, Math.PI / 3); // Curved seam
+        ctx.strokeStyle = '#FFFFFF';
+        ctx.lineWidth = 3;
+        ctx.setLineDash([5, 3]); // Dashed line effect for seam stitching
+        ctx.stroke();
+    </script>
+
+</body>
+
+</html>
