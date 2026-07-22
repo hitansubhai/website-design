@@ -1,0 +1,97 @@
+/* 1. Global Reset: Removes default browser gaps and fixes spacing calculations */
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+/* 2. Base Page Styling: Typography and background colors */
+body {
+font-family: 'Arial', sans-serif;
+background-color: #f4f7f6;
+color: #333333;
+line-height: 1.6;
+}
+
+/* 3. Navigation Bar Styling */
+.navbar {
+display: flex;
+justify-content: space-between;
+align-items: center;
+background-color: #2c3e50;
+padding: 20px 10%;
+color: #ffffff;
+}
+
+.navbar ul {
+list-style: none;
+display: flex;
+}
+
+.navbar ul li {
+margin-left: 20px;
+}
+
+.navbar ul li a {
+color: #ffffff;
+text-decoration: none;
+font-weight: bold;
+transition: color 0.3s;
+}
+
+/* Hover animation for nav links */
+.navbar ul li a:hover {
+color: #1abc9c;
+}
+
+/* 4. Main Body Content Area */
+.content-area {
+max-width: 800px;
+margin: 60px auto;
+padding: 20px;
+background-color: #ffffff;
+border-radius: 8px;
+box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+text-align: center;
+}
+
+.content-area h1 {
+color: #2c3e50;
+margin-bottom: 20px;
+font-size: 2.5rem;
+}
+
+.content-area p {
+font-size: 1.1rem;
+margin-bottom: 30px;
+color: #555555;
+}
+
+/* 5. Button Component */
+.cta-btn {
+background-color: #1abc9c;
+color: white;
+border: none;
+padding: 12px 30px;
+font-size: 1rem;
+font-weight: bold;
+border-radius: 25px;
+cursor: pointer;
+transition: background 0.3s;
+}
+
+.cta-btn:hover {
+background-color: #16a085;
+}
+
+/* 6. Footer Layout */
+footer {
+text-align: center;
+padding: 20px;
+background-color: #2c3e50;
+color: #ffffff;
+font-size: 0.9rem;
+position: fixed;
+bottom: 0;
+width: 100%;
+}
