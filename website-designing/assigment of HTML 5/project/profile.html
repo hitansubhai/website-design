@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Task 4: AI-Generated Meta Title & Description for Profile Page -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Aarav Sharma | Food Delivery Influencer & Reviewer</title>
+    <meta name="description"
+        content="Meet Aarav Sharma, India's favorite food delivery influencer! Learn about his journey, top recommended dishes, and get in touch for collaborations.">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: #fafafa;
+            color: #333;
+        }
+
+        nav {
+            background-color: #e23744;
+            padding: 1rem;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 5px 10px;
+            border-radius: 4px;
+        }
+
+        nav a[aria-current="page"] {
+            background-color: #ffffff;
+            color: #e23744;
+        }
+
+        nav a:focus,
+        button:focus,
+        input:focus,
+        textarea:focus {
+            outline: 3px solid #ffc107;
+            outline-offset: 2px;
+        }
+
+        main,
+        footer {
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .profile-container {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            margin-bottom: 30px;
+        }
+
+        .profile-container img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        /* Task 2: Contact Form Styling */
+        form {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        button[type="submit"] {
+            background-color: #e23744;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 1rem;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #c02430;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            border-top: 1px solid #ddd;
+            font-size: 0.9rem;
+            color: #666;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Task 3: Navigation Bar -->
+    <nav aria-label="Main Navigation">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="profile.html" aria-current="page">Profile & Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- Task 1 & 4: Profile Details & AI-Generated Bio -->
+        <section>
+            <h1>About the Influencer</h1>
+            <div class="profile-container">
+                <!-- Task 5: Accessibility Alt Text -->
+                <img src="https://via.placeholder.com/150"
+                    alt="Portrait photo of food influencer Aarav Sharma smiling while holding a food delivery box">
+                <div>
+                    <h2>Aarav Sharma</h2>
+                    <p><strong>Location:</strong> Mumbai, India 🇮🇳</p>
+                    <p><strong>Specialty:</strong> Cloud Kitchen Unboxings & Midnight Delivery Hacks</p>
+                </div>
+            </div>
+
+            <!-- Task 4: AI Bio Output -->
+            <article>
+                <h3>Bio</h3>
+                <p>Hey there, fellow foodies! I'm Aarav—a full-time tech guy by day and a full-scale food delivery
+                    explorer by night. Armed with three food delivery apps and an insatiable appetite, I’ve made it my
+                    mission to test every biryani, momo, and burger joint in town so you never suffer from food-ordering
+                    regret. Whether it's finding the fastest 10-minute delivery spots or testing if hot fries stay
+                    crispy in transit, I deliver the real flavor truth straight to your screen!</p>
+            </article>
+
+            <h3>Favorite Delivery Dishes</h3>
+            <ul>
+                <li><strong>Old Delhi Style Biryani:</strong> Extra aromatics, always arrives steaming hot.</li>
+                <li><strong>Steamed Cheese & Corn Momos:</strong> Best comfort food for late-night binge watching.</li>
+                <li><strong>Artisanal Sourdough Pizza:</strong> Crispy crust that survives the delivery trip perfectly.
+                </li>
+            </ul>
+        </section>
+
+        <hr style="margin: 40px 0;">
+
+        <!-- Task 2: Contact Form with Semantic HTML5 Elements -->
+        <section>
+            <h2>Work with Me / Send a Suggestion</h2>
+            <form action="#" method="post">
+                <div class="form-group">
+                    <!-- Task 5: Explicit accessibility labels linked with 'for' attribute -->
+                    <label for="fullName">Full Name:</label>
+                    <input type="text" id="fullName" name="fullName" placeholder="e.g. Rahul Verma" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="emailAddress">Email Address:</label>
+                    <input type="email" id="emailAddress" name="emailAddress" placeholder="e.g. rahul@example.com"
+                        required>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message / Restaurant Recommendation:</label>
+                    <textarea id="message" name="message" rows="5"
+                        placeholder="Tell me which food spot I should review next..." required></textarea>
+                </div>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Spice & Bites by Aarav Sharma. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>
