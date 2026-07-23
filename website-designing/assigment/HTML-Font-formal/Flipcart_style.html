@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flipkart Product Feedback</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f1f3f6;
+            padding: 20px;
+        }
+
+        .form-container {
+            max-width: 500px;
+            background: #ffffff;
+            padding: 25px;
+            margin: 0 auto;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .header {
+            background-color: #2874f0;
+            /* Flipkart Blue */
+            color: white;
+            padding: 12px;
+            font-size: 18px;
+            font-weight: bold;
+            margin: -25px -25px 20px -25px;
+            border-top-left-radius: 4px;
+            border-top-right-radius: 4px;
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: bold;
+            color: #212121;
+        }
+
+        input[type="text"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #e0e0e0;
+            border-radius: 2px;
+            box-sizing: border-box;
+        }
+
+        .star-rating label {
+            display: inline-block;
+            margin-right: 12px;
+            font-weight: normal;
+        }
+
+        button {
+            background-color: #fb641b;
+            /* Flipkart Orange */
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            font-size: 16px;
+            cursor: pointer;
+            width: 100%;
+            border-radius: 2px;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background-color: #e65100;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="form-container">
+        <div class="header">Flipkart Product Review</div>
+        <form action="#" method="post" enctype="multipart/form-data">
+
+            <!-- Input Type 1: Text -->
+            <div class="form-group">
+                <label for="product-name">Product Name:</label>
+                <input type="text" id="product-name" name="product_name" placeholder="Enter product name" required>
+            </div>
+
+            <!-- Input Type 2: Radio Buttons -->
+            <div class="form-group">
+                <label>Rating:</label>
+                <div class="star-rating">
+                    <label><input type="radio" name="rating" value="1" required> 1 ★</label>
+                    <label><input type="radio" name="rating" value="2"> 2 ★</label>
+                    <label><input type="radio" name="rating" value="3"> 3 ★</label>
+                    <label><input type="radio" name="rating" value="4"> 4 ★</label>
+                    <label><input type="radio" name="rating" value="5"> 5 ★</label>
+                </div>
+            </div>
+
+            <!-- Textarea -->
+            <div class="form-group">
+                <label for="review">Review Text:</label>
+                <textarea id="review" name="review_text" rows="4" placeholder="Write your feedback here..."></textarea>
+            </div>
+
+            <!-- Input Type 3: File Upload -->
+            <div class="form-group">
+                <label for="photo">Upload Product Photo:</label>
+                <input type="file" id="photo" name="product_photo" accept="image/*">
+            </div>
+
+            <button type="submit">SUBMIT REVIEW</button>
+        </form>
+    </div>
+
+</body>
+
+</html>

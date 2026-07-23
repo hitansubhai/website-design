@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Designing Assignment</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7f6;
+        }
+
+        /* Task 4: Header Styling */
+        header {
+            background-color: #002f6c;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        section {
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #eee;
+        }
+
+        /* Task 1: Music Profile Fonts */
+        .singer-name {
+            font-family: 'Georgia', serif;
+            font-size: 36px;
+            color: #1a1a1a;
+        }
+
+        .top-song {
+            font-family: 'Courier New', monospace;
+            font-size: 24px;
+            color: #ff4757;
+            font-weight: bold;
+        }
+
+        .bio {
+            font-family: 'Trebuchet MS', sans-serif;
+            font-size: 16px;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        /* Task 2: Flipkart-style Form */
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .radio-group {
+            display: flex;
+            gap: 15px;
+            margin-top: 5px;
+        }
+
+        button {
+            background-color: #fb641b;
+            /* Flipkart Orange */
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 2px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #e15615;
+        }
+
+        /* Task 3: Embeds */
+        .embed-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            align-items: center;
+        }
+
+        iframe {
+            border-radius: 12px;
+            max-width: 100%;
+        }
+    </style>
+
+    <!-- Task 5: JavaScript Welcome Alert -->
+    <script>
+        function showWelcome() {
+            alert('Welcome to Swiggy Deals!');
+        }
+        // Triggers the function automatically when the page loads
+        window.onload = showWelcome;
+    </script>
+</head>
+
+<body>
+
+    <!-- Task 4: BookMyShow-style Marquee Banner -->
+    <marquee behavior="scroll" direction="left"
+        style="background-color: #f84464; color: white; padding: 8px; font-weight: bold; font-size: 16px;">
+        Biggest Blockbusters Now Showing!
+    </marquee>
+
+    <!-- Task 4: Header component -->
+    <header>
+        <h1>My HTML Topics Showcase</h1>
+    </header>
+
+    <div class="container">
+
+        <!-- Task 1: Music Profile Section -->
+        <section id="music-profile">
+            <h2>Task 1: Favorite Singer Profile</h2>
+            <div class="singer-name">Arijit Singh</div>
+            <div class="top-song">♪ Tum Hi Ho</div>
+            <p class="bio">
+                Arijit Singh is a globally acclaimed Indian playback singer known for his soulful voice and emotional
+                ballad performances. He has dominated the Indian music industry for over a decade, training extensively
+                in classical music before making his mainstream breakthrough.
+            </p>
+        </section>
+
+        <!-- Task 2: Flipkart-style Product Feedback Form -->
+        <section id="feedback-form">
+            <h2>Task 2: Product Feedback</h2>
+            <form action="#" method="POST" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="productName">Product Name:</label>
+                    <!-- Input Type 1: Text -->
+                    <input type="text" id="productName" name="productName" placeholder="Enter product name..." required>
+                </div>
+
+                <div class="form-group">
+                    <label>Rating:</label>
+                    <!-- Input Type 2: Radio Buttons -->
+                    <div class="radio-group">
+                        <label><input type="checkbox" name="rating" value="1"> 1★</label>
+                        <label><input type="radio" name="rating" value="2"> 2★</label>
+                        <label><input type="radio" name="rating" value="3"> 3★</label>
+                        <label><input type="radio" name="rating" value="4"> 4★</label>
+                        <label><input type="radio" name="rating" value="5" checked> 5★</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="reviewText">Review Details:</label>
+                    <textarea id="reviewText" name="reviewText" rows="4"
+                        placeholder="What did you like or dislike about the product?" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="productPhoto">Upload Product Photo:</label>
+                    <!-- Input Type 3: File Upload -->
+                    <input type="file" id="productPhoto" name="productPhoto" accept="image/*">
+                </div>
+
+                <button type="submit">SUBMIT REVIEW</button>
+            </form>
+        </section>
+
+        <!-- Task 3: Multimedia Integration Section -->
+        <section id="media-embeds">
+            <h2>Task 3: Video & Audio Embeds</h2>
+            <div class="embed-container">
+                <!-- YouTube IPL Moment Embed -->
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+
+                <!-- Spotify Track Embed -->
+                <iframe src="https://open.spotify.com/embed/track/1ct9YgGbyoY2O1vYsh8P16?utm_source=generator"
+                    width="100%" height="152" frameBorder="0" allowfullscreen=""
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                    loading="lazy"></iframe>
+            </div>
+        </section>
+
+    </div>
+
+</body>
+
+</html>
