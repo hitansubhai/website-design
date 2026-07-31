@@ -1,0 +1,197 @@
+body 
+{
+margin: 0;
+padding: 0;
+overflow-x: hidden;
+box-sizing: border-box;    
+background-color: rgb(244, 211, 134);
+}
+#header 
+{
+width: 100%;
+height: auto;
+padding: 0px;
+background-color: #e9ca30;    
+color: white;
+display: flex;
+flex-wrap: wrap;
+top: 0;
+position: sticky;
+}
+.logo
+{
+width: 80%;
+height: auto; 
+margin-left: 5%; 
+line-height: 0.6;  
+}
+.logo h1 
+{
+color: rgb(246, 231, 164);
+font-size: 55px;    
+}
+.logo span 
+{
+font-size: 30px;
+text-align: center;
+margin-left: 5%;    
+}
+.image
+{
+width: 6%;
+height: auto;    
+font-size: 60px;
+}
+#index
+{
+width: 90%;
+height: auto;
+margin: auto;
+margin-top: 5%;    
+}
+.parent 
+{
+width: 100%;
+height: auto;
+margin: auto;
+padding: 6px;
+display: flex;
+flex-wrap: nowrap;
+}
+.child1
+{
+width: 30%;
+height: 250px;
+margin: 5px;
+background-color: #d44b42;
+border-radius: 20px; 
+line-height: 0.5;   
+}
+.child2
+{
+width: 30%;
+height: 250px;
+margin: 5px;
+background-color: #edac1f;
+border-radius: 20px;   
+line-height: 0.5;   
+ 
+}
+.child3
+{
+width: 30%;
+height: 250px;
+margin: 5px;
+background-color: #e4ec0e;
+border-radius: 30px;    
+line-height: 0.5;  
+}
+.child1 p,
+.child2 p,
+.child3 p 
+{
+text-align: center;   
+font-size: 60px; 
+color: white;
+}
+.child1 hr,
+.child2 hr,
+.child3 hr
+{
+width: 70%;
+border: solid 5px white;    
+}  
+
+/* create responsive via media query */
+/* mobile breakpoints*/
+@media only screen and (min-width:320px) and (max-width:480px)
+{
+body 
+{
+margin: 0;
+padding: 0;
+overflow-x: hidden;
+box-sizing: border-box;    
+background-color: #348cb3;
+}
+#header 
+{
+width: 100%;
+height: auto;
+padding: 0px;
+background-color: white;    
+color: black;
+display: flex;
+flex-wrap: wrap;
+top: 0;
+position: sticky;
+}
+.logo
+{
+width: 70%;
+height: auto; 
+margin-left: 5%; 
+line-height: 0.6;  
+}
+.logo h1 
+{
+color: black;
+font-size: 45px;    
+}
+.logo span 
+{
+font-size: 22px;
+text-align: center;
+margin-left: 2%;    
+}
+.image
+{
+width: 10%;
+height: auto;    
+font-size: 65px;
+}
+#index
+{
+width: 90%;
+height: auto;
+margin: auto;
+margin-top: 5%;    
+}
+.parent 
+{
+width: 100%;
+height: auto;
+margin: auto;
+padding: 10px;
+display: flex;
+flex-direction: column;
+}
+.child1
+{
+width: 90%;
+height: 250px;
+margin: 5px;
+background-color: #d44b42;
+border-radius: 20px; 
+line-height: 0.5;   
+}
+.child2
+{
+width: 90%;
+height: 250px;
+margin: 5px;
+background-color: #356ec4;
+border-radius: 20px;   
+line-height: 0.5;   
+ 
+}
+.child3
+{
+width: 90%;
+height: 250px;
+margin: 5px;
+background-color: #9935c4;
+border-radius: 20px;    
+line-height: 0.5;   
+}
+}
