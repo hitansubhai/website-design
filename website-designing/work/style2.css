@@ -4,14 +4,14 @@ margin: 0;
 padding: 0;
 overflow-x: hidden;
 box-sizing: border-box;    
-background-color: #1B5E20;
+background-color: #FFDE4E;
 }
 #header 
 {
 width: 100%;
 height: auto;
 padding: 0px;
-background-color: #AFD6A7;    
+background-color: #FF9D4D;    
 color: white;
 display: flex;
 flex-wrap: wrap;
