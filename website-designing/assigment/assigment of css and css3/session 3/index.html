@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Box Model & Positioning Assignment</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- TASK 4: Sticky Navigation Bar -->
+  <nav class="yt-navbar">
+    <div class="logo">▶ <span>YouTube</span></div>
+    <input type="text" placeholder="Search videos...">
+    <div>Profile</div>
+  </nav>
+
+  <!-- TASK 2: Instagram Story Bar -->
+  <section>
+    <h2>Instagram Story Bar (box-sizing: border-box)</h2>
+    <div class="story-bar">
+      <div class="story-item">
+        <div class="story-circle"><img src="https://picsum.photos/100?random=1" alt="User 1"></div>
+        <span>your_story</span>
+      </div>
+      <div class="story-item">
+        <div class="story-circle"><img src="https://picsum.photos/100?random=2" alt="User 2"></div>
+        <span>alex_dev</span>
+      </div>
+      <div class="story-item">
+        <div class="story-circle"><img src="https://picsum.photos/100?random=3" alt="User 3"></div>
+        <span>sara_design</span>
+      </div>
+      <div class="story-item">
+        <div class="story-circle"><img src="https://picsum.photos/100?random=7" alt="User 4"></div>
+        <span>tech_guru</span>
+      </div>
+      <div class="story-item">
+        <div class="story-circle"><img src="https://picsum.photos/100?random=8" alt="User 5"></div>
+        <span>foodie_life</span>
+      </div>
+      <div class="story-item">
+        <div class="story-circle"><img src="https://picsum.photos/100?random=6" alt="User 3"></div>
+        <span>draw hook</span>
+      </div>
+      <div class="story-item">
+        <div class="story-circle"><img src="https://picsum.photos/100?random=7" alt="User 4"></div>
+        <span>guruji</span>
+      </div>
+      <div class="story-item">
+        <div class="story-circle"><img src="https://picsum.photos/100?random=5" alt="User 5"></div>
+        <span>histrical</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- TASK 1: Flipkart Product Cards -->
+  <section>
+    <h2>Flipkart Product Cards (Margin, Padding & Border)</h2>
+    <div class="product-container">
+      <div class="product-card">
+        <img src="image/headphone.webp" alt="Headphones">
+        <h3>Wireless Headphones</h3>
+        <p class="price">₹1,499</p>
+      </div>
+      <div class="product-card">
+        <img src="image/fitness watch.webp" alt="Smartwatch">
+        <h3>Smart Fitness Watch</h3>
+        <p class="price">₹2,999</p>
+      </div>
+      <div class="product-card">
+        <img src="image/speaker.webp" alt="Speaker">
+        <h3>Bluetooth Speaker</h3>
+        <p class="price">₹999</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Content to enable scrolling for testing Sticky & Fixed elements -->
+  <section>
+    <h2>Scroll Content (Tests Sticky Navbar & Fixed Order Button)</h2>
+    <p>Scroll down this section to verify that the top navigation bar stays sticky at the top and the bottom-right Order
+      button remains fixed in view.</p>
+    <div class="dummy-video-grid">
+      <div class="video-card">Thumbnail 1</div>
+      <div class="video-card">Thumbnail 2</div>
+      <div class="video-card">Thumbnail 3</div>
+      <div class="video-card">Thumbnail 4</div>
+      <div class="video-card">Thumbnail 5</div>
+      <div class="video-card">Thumbnail 6</div>
+      <div class="video-card">Thumbnail 7</div>
+      <div class="video-card">Thumbnail 8</div>
+    </div>
+  </section>
+
+  <!-- TASK 5: Conceptual Explanation -->
+  <section>
+    <h2>Concept: position: static vs position: absolute</h2>
+    <div class="explanation-box">
+      <p><strong>position: static (Default):</strong> The element stays in the normal document flow. Surrounding
+        elements respect its space, and properties like <code>top</code>, <code>right</code>, <code>bottom</code>, or
+        <code>left</code> are completely ignored.
+      </p>
+
+      <p><strong>position: absolute:</strong> The element is removed from the normal layout flow completely. Surrounding
+        elements collapse and behave as if it doesn't exist. It can now be explicitly positioned anywhere relative to
+        its closest non-static parent container (usually styled with <code>position: relative</code>).</p>
+
+      <p><strong>Real-World Example (WhatsApp Unread Badge):</strong></p>
+      <ul>
+        <li>The chat row container is set to <code>position: relative</code>.</li>
+        <li>The red/green unread message counter badge inside it is set to <code>position: absolute</code> with
+          <code>top: -8px; right: -8px;</code>.
+        </li>
+        <li>This positions the badge exactly at the outer corner of the chat row without pushing or disrupting the
+          contact's name and message preview text.</li>
+      </ul>
+
+      <!-- Live mini visual preview for Task 5 -->
+      <div class="badge-demo-container">
+        <span>💬 Chat Row</span>
+        <div class="badge">3</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TASK 3: Zomato Floating 'Order Now' Button -->
+  <button class="zomato-order-btn">
+    🍕 Order Now
+  </button>
+
+</body>
+
+</html>
