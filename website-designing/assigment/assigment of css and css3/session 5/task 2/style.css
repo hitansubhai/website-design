@@ -1,0 +1,20 @@
+/* Task 2 CSS */
+.flipkart-card {
+  width: 220px;
+  background-color: #ffffff;
+  padding: 15px;
+  border-radius: 4px;
+  /* soft, shadow: blur spread color */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  transition: box-shadow 0.3s ease;
+  font-family: sans-serif;
+}
+
+.flipkart-card:hover {
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.18); /* Hover elevation effect */
+}
+
+.product-img {
+  width: 100%;
+  height: auto;
+}

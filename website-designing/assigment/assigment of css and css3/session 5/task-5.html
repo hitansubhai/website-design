@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .ipl-card {
+            width: 260px;
+            height: 360px;
+            /* 1. background-image */
+            background-image: url('https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?w=500');
+            background-size: cover;
+            background-position: center;
+
+            /* 2. border-radius */
+            border-radius: 16px;
+
+            /* 3. box-shadow */
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+
+            display: flex;
+            align-items: flex-end;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+        }
+
+        .player-info {
+            width: 100%;
+            padding: 16px;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.85));
+            color: #ffd700;
+            /* Gold color text */
+        }
+
+        .player-info h3 {
+            margin: 0;
+            font-size: 24px;
+            /* 4. text-shadow */
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.9);
+        }
+
+        .player-info p {
+            margin: 4px 0 0 0;
+            color: #ffffff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="ipl-card">
+        <div class="player-info">
+            <h3>VIRAT KOHLI</h3>
+            <p>RCB • Batsman</p>
+        </div>
+    </div>
+</body>
+
+</html>
