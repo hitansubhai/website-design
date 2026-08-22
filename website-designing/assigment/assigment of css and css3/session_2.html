@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session 2 - Colors, Backgrounds & Typography</title>
+
+    <!-- Task 3 & 5: Importing Google Fonts -->
+    <!-- Headings: Outfit (Trending Youth Font) | Body Paragraphs: Open Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;1,400&family=Outfit:wght@600;700;800&display=swap"
+        rel="stylesheet">
+
+    <style>
+        /* Global Reset */
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Task 3: Global Body Font (Paragraphs/Body Text) */
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: #f8fafc;
+            color: #334155;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        /* Task 3: Global Heading Styles */
+        h1,
+        h2,
+        h3 {
+            font-family: 'Outfit', sans-serif;
+            color: #0f172a;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+        }
+
+        section {
+            background: #ffffff;
+            padding: 24px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+
+        section h2 {
+            margin-bottom: 16px;
+            font-size: 1.3rem;
+            border-bottom: 2px solid #f1f5f9;
+            padding-bottom: 8px;
+        }
+
+        /* TASK 1: Three Colored Boxes (RGB, HEX, Named) */
+        .box-container {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .box {
+            flex: 1;
+            min-width: 150px;
+            height: 100px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+            font-weight: bold;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Box 1: RGB Color */
+        .box-rgb {
+            background-color: rgb(239, 68, 68);
+        }
+
+        /* Box 2: HEX Color */
+        .box-hex {
+            background-color: #3b82f6;
+        }
+
+        /* Box 3: Named Color */
+        .box-named {
+            background-color: Emerald;
+            background-color: seaGreen;
+        }
+
+        /* TASK 2 & 5: Banner Section with Linear Gradient & Custom Font */
+        .hero-banner {
+            /* Task 2: Linear Gradient Background with White Text Contrast */
+            background-image: linear-gradient(135deg, #ff4e50 0%, #f9d423 100%);
+            color: #ffffff;
+            padding: 50px 30px;
+            border-radius: 16px;
+            text-align: center;
+            box-shadow: 0 10px 20px rgba(255, 78, 80, 0.2);
+        }
+
+        /* Task 5: Main Headline styled with trending youth font */
+        .hero-banner h1 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 2.8rem;
+            font-weight: 800;
+            color: #ffffff;
+            letter-spacing: -0.5px;
+            margin-bottom: 12px;
+        }
+
+        .hero-banner p {
+            font-size: 1.15rem;
+            color: rgba(255, 255, 255, 0.95);
+            max-width: 600px;
+            margin: 0 auto 20px;
+        }
+
+        .banner-btn {
+            display: inline-block;
+            background-color: #ffffff;
+            color: #ff4e50;
+            padding: 12px 28px;
+            border-radius: 30px;
+            font-weight: bold;
+            text-decoration: none;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        /* TASK 4: Zomato Text Styling (Before vs After)*/
+        .text-comparison {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .card-sample {
+            flex: 1;
+            min-width: 280px;
+            background: #f8fafc;
+            padding: 16px;
+            border-radius: 8px;
+            border: 1px solid #e2e8f0;
+        }
+
+        .card-sample h3 {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+
+        /* BEFORE Styling: Default, dense layout */
+        .desc-before {
+            font-weight: 400;
+            letter-spacing: normal;
+            line-height: 1.1;
+            color: #000000;
+        }
+
+        /* AFTER Styling: Improved readability using CSS properties */
+        .desc-after {
+            font-weight: 500;
+            letter-spacing: 0.3px;
+            line-height: 1.7;
+            color: #475569;
+        }
+
+        /* TASK 5: Font Justification Styling */
+        .explanation-box {
+            background-color: #eff6ff;
+            border-left: 4px solid #3b82f6;
+            padding: 16px;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .explanation-box p {
+            margin-bottom: 8px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- TASK 1: Colored Boxes -->
+        <section>
+            <h2>Task 1: Colored Boxes using RGB, HEX, and Named Colors</h2>
+            <div class="box-container">
+                <div class="box box-rgb">RGB: rgb(239, 68, 68)</div>
+                <div class="box box-hex">HEX: #3b82f6</div>
+                <div class="box box-named">Named: SeaGreen</div>
+            </div>
+        </section>
+
+        <!-- TASK 2 & 5: Fictional Food App Hero Banner -->
+        <div class="hero-banner">
+            <h1>Craving Something Delicious?</h1>
+            <p>Get fresh food delivered to your doorstep in under 20 minutes with FoodDash.</p>
+            <a href="#" class="banner-btn">Order Now</a>
+        </div>
+
+        <!-- TASK 4: Text Readability Comparison -->
+        <section>
+            <h2>Task 4: Typography Readability (Zomato Description)</h2>
+            <div class="text-comparison">
+                <div class="card-sample">
+                    <h3>Before (Default Styling)</h3>
+                    <p class="desc-before">
+                        Authentic North Indian curry house known for rich gravy, charcoal-grilled kebabs, and garlic
+                        butter naans. Served fresh daily with premium ingredients and hand-ground spices in a cozy
+                        family dining setup.
+                    </p>
+                </div>
+
+                <div class="card-sample">
+                    <h3>After (Styled for Readability)</h3>
+                    <p class="desc-after">
+                        Authentic North Indian curry house known for rich gravy, charcoal-grilled kebabs, and garlic
+                        butter naans. Served fresh daily with premium ingredients and hand-ground spices in a cozy
+                        family dining setup.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- TASK 5: Font Selection Explanation -->
+        <section>
+            <h2>Task 5: Trending Font Choice & Explanation</h2>
+            <div class="explanation-box">
+                <p><strong>Selected Font:</strong> <code>'Outfit'</code> from Google Fonts (used on the main headline
+                    above).</p>
+                <p><strong>Why this font suits a youth-focused app:</strong></p>
+                <ul>
+                    <li><strong>Vibe & Aesthetic:</strong> 'Outfit' is a modern, geometric sans-serif font that gives an
+                        energetic, friendly, and clean high-tech feel—similar to modern apps like Swiggy, Zomato, or
+                        Uber.</li>
+                    <li><strong>Readability:</strong> Its wide, rounded letterforms make short promotional headlines pop
+                        effortlessly on mobile screens without looking cluttered.</li>
+                </ul>
+            </div>
+        </section>
+
+    </div>
+
+</body>
+
+</html>
