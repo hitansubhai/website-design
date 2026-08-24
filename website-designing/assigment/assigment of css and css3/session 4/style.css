@@ -1,0 +1,99 @@
+/* Base Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f4f4f4;
+}
+
+.box {
+    background-color: #e0e0e0;
+    border: 1px solid #999;
+    padding: 10px;
+    margin: 5px;
+    width: 150px;
+    height: 50px;
+}
+
+/* -------------------------------------------------------------------
+   Task 1: Block, Inline, and Inline-Block Comparisons
+   - Block: Starts on a new line, respects width/height.
+   - Inline: Stays side-by-side, IGNORES custom width and height.
+   - Inline-Block: Stays side-by-side AND respects custom width/height.
+------------------------------------------------------------------- */
+.section-block {
+    display: block; /* Spans full width unless specified; forces new line */
+}
+
+.section-inline {
+    display: inline; /* Width & height styles below will be ignored by the browser */
+}
+
+.section-inline-block {
+    display: inline-block; /* Stays inline but honors 150px width & 50px height */
+}
+
+/* -------------------------------------------------------------------
+   Task 2: Instagram-style Navigation Bar using Inline-Block
+------------------------------------------------------------------- */
+.insta-nav {
+    background-color: #ffffff;
+    border: 1px solid #dbdbdb;
+    padding: 10px;
+}
+
+.nav-item {
+    display: inline-block;
+    width: 100px;         /* Custom width allowed */
+    height: 35px;         /* Custom height allowed */
+    line-height: 35px;    /* Center text vertically */
+    text-align: center;
+    color: #262626;
+    text-decoration: none;
+    font-weight: bold;
+    background-color: #fafafa;
+    border: 1px solid #efefef;
+    border-radius: 4px;
+}
+
+/* -------------------------------------------------------------------
+   Task 3: Flipkart Two-Column Layout using Float
+------------------------------------------------------------------- */
+.layout-container {
+    background-color: #ffffff;
+    border: 2px dashed #0073e6;
+    padding: 15px;
+}
+
+.product-list {
+    float: left;
+    width: 65%;
+    background-color: #ffffff;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.sidebar-cart {
+    float: right;
+    width: 30%;
+    background-color: #fff9e6;
+    padding: 10px;
+    border: 1px solid #ffe0b2;
+    box-sizing: border-box;
+}
+
+.product-card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 8px;
+    margin-bottom: 8px;
+}
+
+/* -------------------------------------------------------------------
+   Task 4: Clearfix Technique
+   Fixes height collapse where parent container shrinks because children are floated.
+------------------------------------------------------------------- */
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
