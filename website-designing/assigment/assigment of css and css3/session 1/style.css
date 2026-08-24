@@ -1,0 +1,28 @@
+/* Task 1: Heading unique background color & Paragraph font size */
+h1 {
+    background-color: #E23744; /* Zomato signature red */
+    color: #ffffff;
+    padding: 10px;
+}
+
+p {
+    font-size: 18px;
+}
+
+/* Task 3: Class selector for all menu items */
+.menu-item {
+    font-style: italic;
+    color: green;
+    margin: 6px 0;
+}
+
+/* Task 3: ID selector to highlight one special item */
+#chef-special {
+    background-color: #FFF3CD;
+    font-weight: bold;
+}
+
+/* Task 4: Grouping selector to apply a border to the heading and all menu items */
+h1, .menu-item {
+    border: 2px solid #333333;
+}

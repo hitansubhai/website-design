@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Spice Bistro</title>
+
+    <!-- Task 1: Link External CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Task 2: Internal CSS style setting text color -->
+    <style>
+        p {
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Task 1 & Task 4: Zomato-style Restaurant Heading -->
+    <h1>The Spice Bistro</h1>
+
+    <!-- Task 1 & Task 2: Paragraph with both Inline and Internal CSS -->
+    <!-- 
+      CSS Specificity & Priority Explanation:
+       The paragraph text appears RED (the inline color) rather than BLUE (the internal CSS color).
+       This is because inline styles (`style=""`) have a higher specificity weight than element selectors 
+       in internal or external CSS stylesheets, thus overriding them in the cascade order.
+    -->
+    <p style="color: red;">
+        Authentic flavors served hot to your doorstep. Satisfy your daily cravings with our top-rated gourmet choices.
+    </p>
+
+    <!-- Task 1 & Task 3: Menu List with class selectors -->
+    <ul>
+        <li class="menu-item">Butter Chicken</li>
+        <!-- Task 3: Special item highlighted with an ID selector -->
+        <li class="menu-item" id="chef-special">Paneer Tikka Masala (Chef's Special)</li>
+        <li class="menu-item">Garlic Naan</li>
+        <li class="menu-item">Gulab Jamun</li>
+    </ul>
+
+</body>
+
+</html>
