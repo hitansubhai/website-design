@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Forms & Validation Assignment</title>
+
+    <!-- Bootstrap 5 CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-light py-5">
+
+    <div class="container">
+
+        <!-- TASK 1: Login Form with Floating Labels -->
+        <section class="row justify-content-center mb-5">
+            <div class="col-12 col-md-6 col-lg-5">
+                <div class="card shadow-sm border-0 p-4">
+                    <h3 class="fw-bold mb-3 text-center">Login</h3>
+                    <form>
+
+                        <!-- Floating Username -->
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="loginUsername" placeholder="Username" required>
+                            <label for="loginUsername">Username</label>
+                        </div>
+
+                        <!-- Floating Password -->
+                        <div class="form-floating mb-3">
+                            <input type="password" class="form-control" id="loginPassword" placeholder="Password"
+                                required>
+                            <label for="loginPassword">Password</label>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary w-100 py-2 fw-semibold">Sign In</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- TASK 2: Foodie App Sign-up with Validation Feedback -->
+        <section class="row justify-content-center mb-5">
+            <div class="col-12 col-md-6 col-lg-5">
+                <div class="card shadow-sm border-0 p-4">
+                    <h3 class="fw-bold mb-1 text-center text-danger">Foodie App</h3>
+                    <p class="text-muted text-center small mb-3">Create an account to start ordering</p>
+
+                    <form class="needs-validation" novalidate>
+
+                        <!-- Username Field -->
+                        <div class="mb-3">
+                            <label for="foodieUsername" class="form-label fw-semibold">Username</label>
+                            <input type="text" class="form-control" id="foodieUsername" required>
+                            <div class="invalid-feedback">Please choose a unique username.</div>
+                            <div class="valid-feedback">Looks good!</div>
+                        </div>
+
+                        <!-- Email Field -->
+                        <div class="mb-3">
+                            <label for="foodieEmail" class="form-label fw-semibold">Email address</label>
+                            <input type="email" class="form-control" id="foodieEmail" placeholder="name@example.com"
+                                required>
+                            <div class="invalid-feedback">Please provide a valid email address.</div>
+                            <div class="valid-feedback">Valid email!</div>
+                        </div>
+
+                        <!-- Password Field -->
+                        <div class="mb-3">
+                            <label for="foodiePassword" class="form-label fw-semibold">Password</label>
+                            <input type="password" class="form-control" id="foodiePassword" minlength="6" required>
+                            <div class="invalid-feedback">Password must be at least 6 characters long.</div>
+                            <div class="valid-feedback">Strong password!</div>
+                        </div>
+
+                        <button type="submit" class="btn btn-danger w-100 py-2 fw-semibold">Sign Up</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- TASK 3: BookMyShow Ticket Booking Form -->
+        <section class="row justify-content-center mb-5">
+            <div class="col-12 col-md-6 col-lg-5">
+                <div class="card shadow-sm border-0 p-4">
+                    <h3 class="fw-bold mb-1 text-center text-dark">BookMyShow</h3>
+                    <p class="text-muted text-center small mb-3">Ticket Booking Form</p>
+
+                    <form class="needs-validation" novalidate>
+
+                        <!-- Movie Name -->
+                        <div class="mb-3">
+                            <label for="movieName" class="form-label fw-semibold">Movie Name</label>
+                            <select class="form-select" id="movieName" required>
+                                <option value="" selected disabled>Choose a movie...</option>
+                                <option value="1">Avatar: The Way of Water</option>
+                                <option value="2">Oppenheimer</option>
+                                <option value="3">Dune: Part Two</option>
+                            </select>
+                            <div class="invalid-feedback">Please select a movie.</div>
+                            <div class="valid-feedback">Movie selected!</div>
+                        </div>
+
+                        <!-- Number of Tickets -->
+                        <div class="mb-3">
+                            <label for="ticketCount" class="form-label fw-semibold">Number of Tickets</label>
+                            <input type="number" class="form-control" id="ticketCount" min="1" max="10"
+                                placeholder="1-10" required>
+                            <div class="invalid-feedback">Please enter a ticket amount between 1 and 10.</div>
+                            <div class="valid-feedback">Valid ticket quantity!</div>
+                        </div>
+
+                        <!-- User Email -->
+                        <div class="mb-3">
+                            <label for="bookingEmail" class="form-label fw-semibold">User Email</label>
+                            <input type="email" class="form-control" id="bookingEmail"
+                                placeholder="your-email@domain.com" required>
+                            <div class="invalid-feedback">Please enter a valid email to receive tickets.</div>
+                            <div class="valid-feedback">Tickets will be sent to this email.</div>
+                        </div>
+
+                        <button type="submit" class="btn btn-dark w-100 py-2 fw-semibold">Confirm Booking</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- TASK 4: Refactored Form using Floating Labels with Full Validation -->
+        <section class="row justify-content-center">
+            <div class="col-12 col-md-6 col-lg-5">
+                <div class="card shadow-sm border-0 p-4">
+                    <h3 class="fw-bold mb-1 text-center">Refactored Form</h3>
+                    <p class="text-muted text-center small mb-3">Floating labels combined with validation feedback</p>
+
+                    <form class="needs-validation" novalidate>
+
+                        <!-- Floating Username + Validation -->
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="refactoredUser" placeholder="Username" required>
+                            <label for="refactoredUser">Username</label>
+                            <div class="invalid-feedback">Username is required.</div>
+                            <div class="valid-feedback">Valid username.</div>
+                        </div>
+
+                        <!-- Floating Email + Validation -->
+                        <div class="form-floating mb-3">
+                            <input type="email" class="form-control" id="refactoredEmail" placeholder="Email" required>
+                            <label for="refactoredEmail">Email address</label>
+                            <div class="invalid-feedback">Valid email address is required.</div>
+                            <div class="valid-feedback">Valid email.</div>
+                        </div>
+
+                        <!-- Floating Password + Validation -->
+                        <div class="form-floating mb-3">
+                            <input type="password" class="form-control" id="refactoredPass" placeholder="Password"
+                                minlength="6" required>
+                            <label for="refactoredPass">Password</label>
+                            <div class="invalid-feedback">Must be at least 6 characters.</div>
+                            <div class="valid-feedback">Valid password.</div>
+                        </div>
+
+                        <button type="submit" class="btn btn-success w-100 py-2 fw-semibold">Submit Form</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Standard Bootstrap 5 JavaScript for HTML5 Form Validation Triggers -->
+    <script>
+        (() => {
+            'use strict'
+            const forms = document.querySelectorAll('.needs-validation')
+
+            Array.from(forms).forEach(form => {
+                form.addEventListener('submit', event => {
+                    if (!form.checkValidity()) {
+                        event.preventDefault()
+                        event.stopPropagation()
+                    }
+                    form.classList.add('was-validated')
+                }, false)
+            })
+        })()
+    </script>
+
+</body>
+
+</html>

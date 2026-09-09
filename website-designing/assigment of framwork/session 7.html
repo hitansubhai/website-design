@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- TASK 1: Viewport Meta Tag for Mobile Scaling -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Design & Accessibility Assignment</title>
+
+    <style>
+        /* Global Reset & Base Styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f5f7;
+            color: #333;
+            padding-bottom: 50px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        section {
+            background: #fff;
+            padding: 24px;
+            margin-bottom: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        h2 {
+            margin-bottom: 15px;
+            color: #1a1a1a;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 8px;
+        }
+
+        /*TASK 1: Food Delivery App Landing Page*/
+        .hero-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+
+        .hero-card {
+            text-align: center;
+            background: #fff5f5;
+            padding: 30px 20px;
+            border-radius: 10px;
+        }
+
+        .hero-img {
+            width: 100%;
+            max-height: 300px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin: 15px 0;
+        }
+
+        .order-btn {
+            background-color: #e53935;
+            color: white;
+            border: none;
+            padding: 12px 28px;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .order-btn:hover {
+            background-color: #c62828;
+        }
+
+        /*TASK 2: Media Queries for Movie Streaming Nav
+       Breakpoints: 600px (Tablet) & 1024px (Desktop)*/
+        .movie-nav {
+            background-color: #141414;
+            color: white;
+            padding: 15px;
+            border-radius: 6px;
+        }
+
+        .nav-brand {
+            font-weight: bold;
+            font-size: 1.2rem;
+            color: #e50914;
+        }
+
+        /* Mobile-first base styles (Under 600px) */
+        .menu-toggle {
+            display: block;
+            background: #333;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .nav-links {
+            display: none;
+            /* Collapses into hamburger menu on mobile */
+            list-style: none;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        /* Simple CSS trick to show menu on mobile hover/focus for demo */
+        .movie-nav:hover .nav-links {
+            display: flex;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        /* Tablet View (≥ 600px) */
+        @media (min-width: 600px) {
+            .movie-nav {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .menu-toggle {
+                display: none;
+                /* Hide hamburger */
+            }
+
+            .nav-links {
+                display: flex !important;
+                /* Horizontal layout */
+                flex-direction: row;
+                gap: 15px;
+                margin-top: 0;
+            }
+        }
+
+        /* Desktop View (≥ 1024px) */
+        @media (min-width: 1024px) {
+            .movie-nav {
+                padding: 20px 40px;
+                /* Extra horizontal padding */
+            }
+
+            .nav-links {
+                gap: 40px;
+                /* Extra spacing between nav links */
+            }
+
+            .nav-links a:hover {
+                color: #e50914;
+            }
+        }
+
+        /*TASK 3: Mobile-First Responsive Product Grid*/
+        .product-grid {
+            display: grid;
+            gap: 16px;
+            /* Mobile default: 1 Column */
+            grid-template-columns: 1fr;
+        }
+
+        /* Tablet: 2 Columns */
+        @media (min-width: 600px) {
+            .product-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* Desktop: 4 Columns */
+        @media (min-width: 1024px) {
+            .product-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        .product-card {
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 15px;
+            text-align: center;
+            background: #fff;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 150px;
+            object-fit: contain;
+            margin-bottom: 10px;
+        }
+
+        .price {
+            font-weight: bold;
+            color: #388e3c;
+            margin-top: 5px;
+        }
+
+        /*TASK 4: BookMyShow Accessible Booking Form*/
+        .booking-form {
+            max-width: 500px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .form-group label {
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .form-group input,
+        .form-group select {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .book-btn {
+            background-color: #f84464;
+            color: white;
+            border: none;
+            padding: 12px;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- TASK 1 SECTION -->
+        <section>
+            <h2>1. Food Delivery Landing Page</h2>
+            <header class="hero-header">
+                <h3 style="color: #e53935;">TastyDash</h3>
+                <span>Contact: support@tastydash.com</span>
+            </header>
+            <div class="hero-card">
+                <h1>Delicious Food Delivered To Your Doorstep</h1>
+                <p>Order from your favorite local restaurants in seconds.</p>
+                <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1000&q=80"
+                    alt="Delicious food spread with pizza, burgers, and salad" class="hero-img">
+                <br>
+                <button class="order-btn">Order Now</button>
+            </div>
+        </section>
+
+        <!-- TASK 2 SECTION -->
+        <section>
+            <h2>2. Movie Streaming Responsive Navigation</h2>
+            <nav class="movie-nav" aria-label="Movie navigation menu">
+                <div class="nav-brand">StreamFlix</div>
+                <button class="menu-toggle" aria-label="Toggle Navigation Menu">☰ Menu</button>
+                <ul class="nav-links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Movies</a></li>
+                    <li><a href="#">TV Shows</a></li>
+                    <li><a href="#">My List</a></li>
+                </ul>
+            </nav>
+            <p style="margin-top: 10px; font-size: 0.85rem; color: #666;">
+                <em>Resize browser width to test layout shifts: Stacked/Hamburger (&lt;600px), Horizontal Tablet (600px
+                    - 1023px), Extra Spaced Desktop (≥1024px).</em>
+            </p>
+        </section>
+
+        <!-- TASK 3 SECTION -->
+        <section>
+            <h2>3. Flipkart-style Product Grid (Mobile-First)</h2>
+            <div class="product-grid">
+                <!-- Item 1 -->
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/150" alt="Wireless Headphones">
+                    <h4>Wireless Headphones</h4>
+                    <p class="price">₹1,999</p>
+                </div>
+                <!-- Item 2 -->
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/150" alt="Smart Watch">
+                    <h4>Smart Watch</h4>
+                    <p class="price">₹2,499</p>
+                </div>
+                <!-- Item 3 -->
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/150" alt="Bluetooth Speaker">
+                    <h4>Bluetooth Speaker</h4>
+                    <p class="price">₹1,299</p>
+                </div>
+                <!-- Item 4 -->
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/150" alt="Power Bank 10000mAh">
+                    <h4>Power Bank</h4>
+                    <p class="price">₹999</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- TASK 4 SECTION -->
+        <section>
+            <h2>4. BookMyShow Booking Form (Accessible with ARIA)</h2>
+            <form class="booking-form" role="form" aria-labelledby="booking-form-title">
+                <h3 id="booking-form-title" class="sr-only">Book Movie Tickets</h3>
+
+                <div class="form-group">
+                    <label for="movieSelect">Select Movie</label>
+                    <select id="movieSelect" name="movie" required aria-required="true">
+                        <option value="">-- Choose a Movie --</option>
+                        <option value="dune">Dune: Part Two</option>
+                        <option value="oppenheimer">Oppenheimer</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="ticketQty">Number of Seats</label>
+                    <input type="number" id="ticketQty" name="tickets" min="1" max="10" value="1" required
+                        aria-required="true">
+                </div>
+
+                <div class="form-group">
+                    <label for="userEmail">Email Address</label>
+                    <input type="email" id="userEmail" name="email" placeholder="yourname@example.com" required
+                        aria-required="true">
+                </div>
+
+                <!-- Button with explicit aria-label -->
+                <button type="submit" class="book-btn" aria-label="Submit ticket booking request">
+                    Book Tickets
+                </button>
+            </form>
+        </section>
+
+    </div>
+
+</body>
+
+</html>
